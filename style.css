@@ -18,7 +18,7 @@ body {
 
 }
 
-.card-container {
+#card-container {
     margin: auto auto auto auto;
     width: 220em;
     height: 150em;
@@ -27,15 +27,37 @@ body {
     transition: box-shadow 1.5s;
 }
 
-.card-container:hover {
+#album {
+    margin: auto auto auto auto;
+    width: 220em;
+    height: 150em;
+    overflow: hidden;
+    border-radius: 80px;
+    transition: box-shadow 1.5s;
+}
+
+#card-container:hover {
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.55);
     transition: box-shadow 0.5s;
 }
 
-.card-container img {
+#card-container:hover .save-overlay {
+    transition: translateY(0em);
+}
+
+#card-container:hover #hovericons {
+    transition: translateY(0em);
+}
+
+
+
+/*#hovericons {
+    transform: translateY(25em);
+} */
+
+#card-container #album img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
 
 .save-overlay {
@@ -48,14 +70,40 @@ body {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
-    top: 0;
+    top: 150px;
     bottom: 0;
-    right: 0;
+    right: 150px;
     width: 6em;
     height: 3em;
+    /* transform: translateY(-15em); */
 }
 
 .bottompart {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+    background-color: ghostwhite;
+    font-size: 5em;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    bottom: 150px;
+    left: 150px;
+    right: 0;
+    width: 18em;
+    height: 3em;
+    white-space: nowrap;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
+.bottompart i {
+    text-align: right;
+}
+
+.arrow {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +113,28 @@ body {
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 150px;
+    left: 22em;
     right: 0;
-    width: 18em;
+    width: 3em;
     height: 3em;
+
 }
 
-.bottompart i {
-    text-align: right;
+.elipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+    background-color: ghostwhite;
+    font-size: 5em;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    bottom: 150px;
+    left: 27em;
+    right: 0;
+    width: 3em;
+    height: 3em;
+
 }
