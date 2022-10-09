@@ -23,6 +23,8 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 30px;
+    transform: translateX();
+    transition: 1s all;
 
 }
 
@@ -36,7 +38,6 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     position: relative;
-    transition: transform 0.5s;
 }
 
 #album img {
@@ -44,10 +45,14 @@ body {
     height: 100%;
 }
 
-#card-container #album:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
-    transition: transform 1s;
+#card-container:hover {
+    box-shadow: 6px 6px 15px;
 }
+
+#card-container .save-button:hover {
+    transform: translateY(20px);
+}
+
 
 
 
@@ -65,7 +70,11 @@ body {
     right: 30px;
     width: 4.5em;
     height: 2.5em;
-    /* transform: translateY(-15em); */
+    /* transform: translateY(-100px); */
+}
+
+.save-button:hover {
+    transform: translateY(10px);
 }
 
 .bottompart {
@@ -75,26 +84,19 @@ body {
     align-items: center;
     border-radius: 150px;
     background-color: ghostwhite;
-    /* font-size: 5em; */
     position: absolute;
     bottom: 20px;
     left: 30px;
     right: 0;
     width: 16em;
     height: 2.5em;
-    white-space: elipsis;
+    overflow: hidden;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden
-        /* text-overflow: ellipsis; */
+
 }
 
-/* .bottompart p {}
 
-*/
-.bottompart i {
-    text-align: right;
-}
 
 .arrow {
     display: flex;
